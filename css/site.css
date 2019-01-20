@@ -1,0 +1,350 @@
+.h1
+{
+    font-size: 150%;
+}
+
+
+.section-container
+{
+    max-width: 960px;
+    margin: auto;
+}
+
+.section-row
+{
+    display: flex;
+}
+
+.section-title
+{
+    flex: 40%;
+}
+
+.section-character-information
+{
+    flex: 60%;
+}
+
+.section-investigator-statistics
+{
+    flex: 40%;
+}
+
+.section-investigator-skills
+{
+    flex: 33.33%;
+}
+
+.section-investigator-weapons
+{
+    flex: 60%;
+}
+
+.section-investigator-misc
+{
+    flex: 40%
+}
+
+
+.section-magic-points,
+.section-hit-points,
+.section-sanity-points
+{
+    flex: 20%;
+}
+
+.character-title,
+.statistics-title,
+.inventory-title,
+.skills-title,
+.point-title
+{
+    color: white;
+    background-color: black;
+
+    font-size: 110%;
+    font-weight: bold;
+
+}
+
+.character-field-row
+{
+    display: flex;
+}
+
+.character-field-pair
+{
+    display: inline-flex;
+    width: 200px;
+
+    font-size: 80%;
+}
+
+.character-field-header
+{
+    display: inline-flex;
+    vertical-align: bottom;
+}
+
+.character-field-value
+{
+    display: inline;
+    padding-left: 2%;
+
+    flex-grow: 1;
+    border-bottom: 1px solid black;
+    margin-left: 2%;
+}
+
+.statistics-field-row
+{
+    display: flex;
+}
+
+.statistics-field-pair
+{
+    display: inline-flex;
+    min-width: 100px;
+
+    position: relative;
+}
+
+.statistics-field-tooltip
+{
+    visibility: hidden;
+    width: 500%;
+    background-color: #353535;
+    color: #fff;
+    padding: 5px 0;
+    border-radius: 3px;
+    text-align: center;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    width: 120%;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    font-size: 90%;
+}
+
+.statistics-field-pair:hover .statistics-field-tooltip
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.statistics-field-tooltip-dice-roll:hover
+{
+    color: deepskyblue;
+}
+
+.statistics-field-header
+{
+    display: inline-flex;
+}
+
+.statistics-field-value
+{
+    display: inline;
+
+    flex-grow: 1;
+    border-bottom: 1px solid black;
+    margin-left: 1%;
+
+    text-align: center;
+}
+
+
+.magic-points-status
+{
+    font-size: 200%;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.hit-points-status
+{
+    font-size: 200%;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.sanity_points-status
+{
+    font-size: 200%;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.points-status-decorator
+{
+    display: inline;
+}
+
+.skills-pair
+{
+    display: flex;
+    font-size: 85%;
+}
+
+.skills-header
+{
+}
+
+.skills-value
+{
+    margin-left: 2%;
+}
+
+.skills-pair-options
+{
+    visibility: hidden;
+    float: right;
+    margin-left: auto;
+    margin-right: 3%;
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.skills-pair-roll-result
+{
+    display: none;
+    color: green;
+    font-weight: bolder;
+}
+
+.skills-pair:hover .skills-pair-options
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.skills-pair-button:hover
+{
+    color: deepskyblue;
+}
+
+.table-investigator-weapons
+{
+    padding:0%;
+}
+
+.table-investigator-weapons-header th
+{
+    padding-top:    0%;
+    padding-bottom: 0%;
+}
+
+.table-investigator-weapons-row td
+{
+    padding: 0%;
+    font-size: 85%;
+}
+
+
+.misc-pair
+{
+    display: inline-flex;
+    width: 100%;
+}
+
+.misc-header
+{
+    font-size: 85%;
+}
+
+.misc-value
+{
+    padding-left: 2%;
+
+    flex-grow: 1;
+    border-bottom: 1px solid black;
+    margin-left: 2%;
+
+    font-size: 85%;
+
+}
+
+.title-subtitle
+{
+
+}
+
+.title-subtitle-tooltips
+{
+    visibility: hidden;
+    float: right;
+    padding-right: 5%;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.title-subtitle:hover .title-subtitle-tooltips
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.title-subtitle-tooltips-icon
+{
+
+}
+
+.title-subtitle-tooltips-icon:hover
+{
+    color: deepskyblue;
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.resistance-modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

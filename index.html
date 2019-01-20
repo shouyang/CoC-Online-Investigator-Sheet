@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Investigator Sheet - Call Of Cthulhu</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <script type="text/javascript" src="js/dice.js"></script>
+
+</head>
+<body>
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="section-container">
+
+    <div class="section-row">
+        <div class="section-title">
+            <h2>Call of Cthulhu</h2>
+            <div class="title-subtitle">
+                <span>Online Investigator Sheet </span>
+                <span class="title-subtitle-tooltips">
+                    <i class="title-subtitle-tooltips-icon fas fa-lock fa-lg"></i>
+                    <i class="title-subtitle-tooltips-icon fas fa-lock-open fa-lg"></i>
+                    <i class="title-subtitle-tooltips-icon fas fa-file-upload fa-lg"></i>
+                    <i class="title-subtitle-tooltips-icon fas fa-file-download fa-lg"></i>
+                    <i class="title-subtitle-tooltips-icon fas fa-list-ul fa-lg"></i>
+                    <i class="title-subtitle-tooltips-icon fas fa-question fa-lg"></i>
+                    <i class="title-subtitle-tooltips-icon fas fa-info fa-lg"></i>
+                </span>
+            </div>
+        </div>
+        <div class="section-character-information">
+
+            <div class="character-title">CHARACTER INFORMATION</div>
+
+            <div class="row character-field-row">
+                <div class="character-field-header">Name:</div>
+                <div class="character-field-value" contenteditable="true"></div>
+                <div class="character-field-header">Sex:</div>
+                <div class="character-field-value" contenteditable="true"></div>
+            </div>
+
+            <div class="row character-field-row">
+                <div class="character-field-header">Occupation:</div>
+                <div class="character-field-value" contenteditable="true"></div>
+                <div class="character-field-header">Age:</div>
+                <div class="character-field-value" contenteditable="true"></div>
+            </div>
+
+            <div class="row character-field-row">
+                <div class="character-field-header">Income:</div>
+                <div class="character-field-value" contenteditable="true"></div>
+                <div class="character-field-header">Savings:</div>
+                <div class="character-field-value" contenteditable="true"></div>
+            </div>
+
+            <div class="row character-field-row">
+                <div class="character-field-header">Nationality:</div>
+                <div class="character-field-value" contenteditable="true"></div>
+                <div class="character-field-header">Residence:</div>
+                <div class="character-field-value" contenteditable="true"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-row">
+
+        <div class="section-investigator-statistics">
+
+            <div class="statistics-title">INVESTIGATOR STATISTICS</div>
+
+            <div class="row statistics-field-row">
+
+                <div class="statistics-field-pair">
+                    <div class="statistics-field-header">STR: </div>
+                    <div class="statistics-field-value" contenteditable="true"></div>
+                    <div class="statistics-field-tooltip">
+                        <div>
+                            <span>Half: </span>
+                            <span>Quarter: </span>
+                        </div>
+                        <div>
+                            <span>Roll: </span>
+                            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="roll_investigator_statistic(this)"></i>
+                            <span class="statistics-field-tooltip-dice-roll" onclick="displayStatisticsResistanceModal(this)">R</span>
+                        </div>
+                        <div class="statistics-field-tooltip-dice-result">Pass!</div>
+                    </div>
+                </div>
+                <div class="statistics-field-pair">
+                    <div class="statistics-field-header">DEX: </div>
+                    <div class="statistics-field-value" contenteditable="true"></div>
+                    <div class="statistics-field-tooltip">
+                        <div>
+                            <span>Half: </span>
+                            <span>Quarter: </span>
+                        </div>
+                        <div>
+                            <span>Roll: </span>
+                            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="roll_investigator_statistic(this)"></i>
+                            <span class="statistics-field-tooltip-dice-roll">R</span>
+                        </div>
+                        <div class="statistics-field-tooltip-dice-result">Pass!</div>
+                    </div>
+                </div>
+                <div class="statistics-field-pair">
+                    <div class="statistics-field-header">INT: </div>
+                    <div class="statistics-field-value" contenteditable="true"></div>
+                    <div class="statistics-field-tooltip">
+                        <div>
+                            <span>Half: </span>
+                            <span>Quarter: </span>
+                        </div>
+                        <div>
+                            <span>Roll: </span>
+                            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="roll_investigator_statistic(this)"></i>
+                            <span class="statistics-field-tooltip-dice-roll">R</span>
+                        </div>
+                        <div class="statistics-field-tooltip-dice-result">Pass!</div>
+                    </div>
+                </div>
+                <div class="statistics-field-pair">
+                    <div class="statistics-field-header">Idea: </div>
+                    <div class="statistics-field-value" contenteditable="true"></div>
+                    <div class="statistics-field-tooltip">
+                        <div>
+                            <span>Half: </span>
+                            <span>Quarter: </span>
+                        </div>
+                        <div>
+                            <span>Roll: </span>
+                            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="roll_investigator_statistic(this)"></i>
+                            <span class="statistics-field-tooltip-dice-roll">R</span>
+                        </div>
+                        <div class="statistics-field-tooltip-dice-result">Pass!</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row statistics-field-row">
+
+                <div class="statistics-field-pair">
+                    <div class="statistics-field-header">CON: </div>
+                    <div class="statistics-field-value" contenteditable="true"></div>
+                    <div class="statistics-field-tooltip">
+                        <div>
+                            <span>Half: </span>
+                            <span>Quarter: </span>
+                        </div>
+                        <div>
+                            <span>Roll: </span>
+                            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="roll_investigator_statistic(this)"></i>
+                            <span class="statistics-field-tooltip-dice-roll">R</span>
+                        </div>
+                        <div class="statistics-field-tooltip-dice-result">Pass!</div>
+                    </div>
+                </div>
+                <div class="statistics-field-pair">
+                    <div class="statistics-field-header">APP: </div>
+                    <div class="statistics-field-value" contenteditable="true"></div>
+                    <div class="statistics-field-tooltip">
+                        <div>
+                            <span>Half: </span>
+                            <span>Quarter: </span>
+                        </div>
+                        <div>
+                            <span>Roll: </span>
+                            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="roll_investigator_statistic(this)"></i>
+                            <span class="statistics-field-tooltip-dice-roll">R</span>
+                        </div>
+                        <div class="statistics-field-tooltip-dice-result">Pass!</div>
+                    </div>
+                </div>
+                <div class="statistics-field-pair">
+                    <div class="statistics-field-header">POW: </div>
+                    <div class="statistics-field-value" contenteditable="true"></div>
+                    <div class="statistics-field-tooltip">
+                        <div>
+                            <span>Half: </span>
+                            <span>Quarter: </span>
+                        </div>
+                        <div>
+                            <span>Roll: </span>
+                            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="roll_investigator_statistic(this)"></i>
+                            <span class="statistics-field-tooltip-dice-roll">R</span>
+                        </div>
+                        <div class="statistics-field-tooltip-dice-result">Pass!</div>
+                    </div>
+                </div>
+                <div class="statistics-field-pair">
+                    <div class="statistics-field-header">Luck: </div>
+                    <div class="statistics-field-value" contenteditable="true"></div>
+                    <div class="statistics-field-tooltip">
+                        <div>
+                            <span>Half: </span>
+                            <span>Quarter: </span>
+                        </div>
+                        <div>
+                            <span>Roll: </span>
+                            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="roll_investigator_statistic(this)"></i>
+                            <span class="statistics-field-tooltip-dice-roll">R</span>
+                        </div>
+                        <div class="statistics-field-tooltip-dice-result">Pass!</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row statistics-field-row">
+
+                <div class="statistics-field-pair">
+                    <div class="statistics-field-header">SIZ: </div>
+                    <div class="statistics-field-value" contenteditable="true"></div>
+                    <div class="statistics-field-tooltip">
+                        <div>
+                            <span>Half: </span>
+                            <span>Quarter: </span>
+                        </div>
+                        <div>
+                            <span>Roll: </span>
+                            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="roll_investigator_statistic(this)"></i>
+                            <span class="statistics-field-tooltip-dice-roll">R</span>
+                        </div>
+                        <div class="statistics-field-tooltip-dice-result">Pass!</div>
+                    </div>
+                </div>
+                <div class="statistics-field-pair">
+                    <div class="statistics-field-header">SAN: </div>
+                    <div class="statistics-field-value" contenteditable="true"></div>
+                    <div class="statistics-field-tooltip">
+                        <div>
+                            <span>Half: </span>
+                            <span>Quarter: </span>
+                        </div>
+                        <div>
+                            <span>Roll: </span>
+                            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="roll_investigator_statistic(this)"></i>
+                            <span class="statistics-field-tooltip-dice-roll">R</span>
+                        </div>
+                        <div class="statistics-field-tooltip-dice-result">Pass!</div>
+                    </div>
+                </div>
+                <div class="statistics-field-pair">
+                    <div class="statistics-field-header">EDU: </div>
+                    <div class="statistics-field-value" contenteditable="true"></div>
+                    <div class="statistics-field-tooltip">
+                        <div>
+                            <span>Half: </span>
+                            <span>Quarter: </span>
+                        </div>
+                        <div>
+                            <span>Roll: </span>
+                            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="roll_investigator_statistic(this)"></i>
+                            <span class="statistics-field-tooltip-dice-roll">R</span>
+                        </div>
+                        <div class="statistics-field-tooltip-dice-result">Pass!</div>
+                    </div>
+                </div>
+                <div class="statistics-field-pair">
+                    <div class="statistics-field-header">Know: </div>
+                    <div class="statistics-field-value" contenteditable="true"></div>
+                    <div class="statistics-field-tooltip">
+                        <div>
+                            <span>Half: </span>
+                            <span>Quarter: </span>
+                        </div>
+                        <div>
+                            <span>Roll: </span>
+                            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="roll_investigator_statistic(this)"></i>
+                            <span class="statistics-field-tooltip-dice-roll">R</span>
+                        </div>
+                        <div class="statistics-field-tooltip-dice-result">Pass!</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row statistics-field-row">
+                <div class="statistics-field-header">Degrees: </div>
+                <div class="statistics-field-value" contenteditable="true"></div>
+            </div>
+
+            <div class="row statistics-field-row">
+                <div class="statistics-field-header">Schools:  </div>
+                <div class="statistics-field-value" contenteditable="true"></div>
+                <div class="statistics-field-header">Damage Bonus: </div>
+                <div class="statistics-field-value" contenteditable="true"></div>
+            </div>
+        </div>
+
+        <div class="section-magic-points">
+            <div class="point-title" style="margin: 0%">Magic Points</div>
+            <div class="magic-points-status" contenteditable="true">20</div>
+            <div class="points-status-decorator"> Max: </div>
+        </div>
+        <div class="section-hit-points">
+            <div class="point-title">Hit Points</div>
+            <div class="hit-points-status" contenteditable="true">20</div>
+        </div>
+        <div class="section-sanity-points">
+            <div class="point-title">Sanity Points</div>
+            <div class="sanity_points-status" contenteditable="true">20</div>
+        </div>
+
+    </div>
+
+    <div class="section-row">
+
+        <div class="section-investigator-skills">
+            <div class="statistics-title">INVESTIGATOR SKILLS</div>
+            <div class="skills-pair" id="Accounting">
+                <span class="skills-header" contenteditable="true"> Accounting</span>
+                <span class="skills-value" contenteditable="true"> 10%</span>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm" onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Anthropology">
+                <div class="skills-header" contenteditable="true"> Anthropology</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Archaeology">
+                <div class="skills-header" contenteditable="true"> Archaeology</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Astronomy">
+                <div class="skills-header" contenteditable="true"> Astronomy</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Bargain">
+                <div class="skills-header" contenteditable="true"> Bargain</div>
+                <div class="skills-value" contenteditable="true"> 5%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Botany">
+                <div class="skills-header" contenteditable="true"> Botany</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Camouflage">
+                <div class="skills-header" contenteditable="true"> Camouflage</div>
+                <div class="skills-value" contenteditable="true"> 25%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Chemistry">
+                <div class="skills-header" contenteditable="true"> Chemistry</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Climb">
+                <div class="skills-header" contenteditable="true"> Climb</div>
+                <div class="skills-value" contenteditable="true"> 40%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Credit Rating">
+                <div class="skills-header" contenteditable="true"> Credit Rating</div>
+                <div class="skills-value" contenteditable="true"> 15%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Cthulhu Mythos">
+                <div class="skills-header" contenteditable="true"> Cthulhu Mythos</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Debate">
+                <div class="skills-header" contenteditable="true"> Debate</div>
+                <div class="skills-value" contenteditable="true"> 10%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Diagnose Disease">
+                <div class="skills-header" contenteditable="true"> Diagnose Disease</div>
+                <div class="skills-value" contenteditable="true"> 40%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Dodge">
+                <div class="skills-header" contenteditable="true"> Dodge</div>
+                <div class="skills-value" contenteditable="true"> 20%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Drive Automobile">
+                <div class="skills-header" contenteditable="true"> Drive Automobile</div>
+                <div class="skills-value" contenteditable="true"> 20%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Drive x">
+                <div class="skills-header" contenteditable="true"> Drive x</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Electrical Repair">
+                <div class="skills-header" contenteditable="true"> Electrical Repair</div>
+                <div class="skills-value" contenteditable="true"> 10%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Fast Talk">
+                <div class="skills-header" contenteditable="true"> Fast Talk</div>
+                <div class="skills-value" contenteditable="true"> 5%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="First Aid">
+                <div class="skills-header" contenteditable="true"> First Aid</div>
+                <div class="skills-value" contenteditable="true"> 30%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Geology">
+                <div class="skills-header" contenteditable="true"> Geology</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-investigator-skills">
+            <div class="statistics-title">&#10240;</div>
+
+            <div class="skills-pair" id="Hide">
+                <span class="skills-header" contenteditable="true"> Hide</span>
+                <span class="skills-value" contenteditable="true"> 10%</span>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="History">
+                <div class="skills-header" contenteditable="true"> History</div>
+                <div class="skills-value" contenteditable="true"> 20%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Jump">
+                <div class="skills-header" contenteditable="true"> Jump</div>
+                <div class="skills-value" contenteditable="true"> 25%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Law">
+                <div class="skills-header" contenteditable="true"> Law</div>
+                <div class="skills-value" contenteditable="true"> 05%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Library Use">
+                <div class="skills-header" contenteditable="true"> Library Use</div>
+                <div class="skills-value" contenteditable="true"> 25%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Linguist">
+                <div class="skills-header" contenteditable="true"> Linguist</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Listen">
+                <div class="skills-header" contenteditable="true"> Listen</div>
+                <div class="skills-value" contenteditable="true"> 25%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Make Maps">
+                <div class="skills-header" contenteditable="true"> Make Maps</div>
+                <div class="skills-value" contenteditable="true"> 10%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Mechanical Repair">
+                <div class="skills-header" contenteditable="true"> Mechanical Repair</div>
+                <div class="skills-value" contenteditable="true"> 20%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Occult">
+                <div class="skills-header" contenteditable="true"> Occult</div>
+                <div class="skills-value" contenteditable="true"> 5%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Operate Heavy Machinery">
+                <div class="skills-header" contenteditable="true"> Operate Heavy Machinery</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Oratory">
+                <div class="skills-header" contenteditable="true"> Oratory</div>
+                <div class="skills-value" contenteditable="true"> 5%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Pharmacy">
+                <div class="skills-header" contenteditable="true"> Pharmacy</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Photography">
+                <div class="skills-header" contenteditable="true"> Photography</div>
+                <div class="skills-value" contenteditable="true"> 10%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Physics">
+                <div class="skills-header" contenteditable="true"> Physics</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Pick Pocket">
+                <div class="skills-header" contenteditable="true"> Pick Pocket</div>
+                <div class="skills-value" contenteditable="true"> 05%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Pilot Aircraft">
+                <div class="skills-header" contenteditable="true"> Pilot Aircraft</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Pilot x">
+                <div class="skills-header" contenteditable="true"> Pilot x</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Psychoanalysis">
+                <div class="skills-header" contenteditable="true"> Psychoanalysis</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Psychology">
+                <div class="skills-header" contenteditable="true"> Psychology</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-investigator-skills">
+            <div class="statistics-title">&#10240;</div>
+
+            <div class="skills-pair" id="Read / Write English">
+                <span class="skills-header" contenteditable="true"> Read / Write English</span>
+                <span class="skills-value" contenteditable="true"> 10%</span>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Read / Write x">
+                <div class="skills-header" contenteditable="true"> Read / Write x</div>
+                <div class="skills-value" contenteditable="true"> 20%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Read / Write y">
+                <div class="skills-header" contenteditable="true"> Read / Write y</div>
+                <div class="skills-value" contenteditable="true"> 25%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Read / Write z">
+                <div class="skills-header" contenteditable="true"> Read / Write z</div>
+                <div class="skills-value" contenteditable="true"> 05%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Ride">
+                <div class="skills-header" contenteditable="true"> Ride</div>
+                <div class="skills-value" contenteditable="true"> 25%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Sing">
+                <div class="skills-header" contenteditable="true"> Sing</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Sneak">
+                <div class="skills-header" contenteditable="true"> Sneak</div>
+                <div class="skills-value" contenteditable="true"> 25%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Speak x">
+                <div class="skills-header" contenteditable="true"> Speak x</div>
+                <div class="skills-value" contenteditable="true"> 10%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Speak y">
+                <div class="skills-header" contenteditable="true"> Speak y</div>
+                <div class="skills-value" contenteditable="true"> 20%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Spot Hidden">
+                <div class="skills-header" contenteditable="true"> Spot Hidden</div>
+                <div class="skills-value" contenteditable="true"> 5%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Swim">
+                <div class="skills-header" contenteditable="true"> Swim</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Throw">
+                <div class="skills-header" contenteditable="true"> Throw</div>
+                <div class="skills-value" contenteditable="true"> 5%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Track">
+                <div class="skills-header" contenteditable="true"> Track</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Treat Disease">
+                <div class="skills-header" contenteditable="true"> Treat Disease</div>
+                <div class="skills-value" contenteditable="true"> 10%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Treat Poison">
+                <div class="skills-header" contenteditable="true"> Treat Poison</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Zoology">
+                <div class="skills-header" contenteditable="true"> Pick Zoology</div>
+                <div class="skills-value" contenteditable="true"> 05%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+
+            <div class="skills-pair" id="Unused A">
+                <div class="skills-header" contenteditable="true"> Unused A</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Unused B">
+                <div class="skills-header" contenteditable="true"> Unused B</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Unused C">
+                <div class="skills-header" contenteditable="true"> Unused C</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+            <div class="skills-pair" id="Unused D">
+                <div class="skills-header" contenteditable="true"> Unused D</div>
+                <div class="skills-value" contenteditable="true"> 0%</div>
+
+                <div class="skills-pair-options">
+                    <i class="skills-pair-button fas fa-dice fa-sm " onclick="roll_investigator_skill(this)"></i>
+                    <span class="skills-pair-button">R</span>
+
+                    <span class="skills-pair-roll-result"> Pass: 50</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="section-row">
+
+        <div class="section-investigator-weapons">
+            <div class="inventory-title">INVESTIGATOR WEAPONS</div>
+
+            <table class="table-investigator-weapons">
+                <tr class="table-investigator-weapons-header">
+                    <th>Weapon</th>
+                    <th>Shots</th>
+                    <th>Attack</th>
+                    <th>Parry</th>
+                    <th>Damage</th>
+                    <th>Range</th>
+                    <th>Hp.</th>
+                    <th>Ammo</th>
+                </tr>
+
+                <tr class="table-investigator-weapons-row" id="Weapon 1">
+                    <td contenteditable="true">Fist/Punch</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true">50</td>
+                    <td contenteditable="true"></td>
+
+                    <td contenteditable="true">1D3</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+                <tr class="table-investigator-weapons-row" id="Weapon 2">
+                    <td contenteditable="true">Kick</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true">25</td>
+                    <td contenteditable="true"></td>
+
+                    <td contenteditable="true">1D6</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+                <tr class="table-investigator-weapons-row" id="Weapon 3">
+                    <td contenteditable="true">Grapple</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true">25</td>
+                    <td contenteditable="true"></td>
+
+                    <td contenteditable="true">Special</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+                <tr class="table-investigator-weapons-row" id="Weapon 4">
+                    <td contenteditable="true">xxx</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+                <tr class="table-investigator-weapons-row" id="Weapon 5">
+                    <td contenteditable="true">xxx</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+                <tr class="table-investigator-weapons-row" id="Weapon 6">
+                    <td contenteditable="true">xxx</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+                <tr class="table-investigator-weapons-row" id="Weapon 7">
+                    <td contenteditable="true">xxx</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+                <tr class="table-investigator-weapons-row" id="Weapon 8">
+                    <td contenteditable="true">xxx</td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                    <td contenteditable="true"></td>
+                </tr>
+
+            </table>
+
+        </div>
+        <div class="section-investigator-misc">
+            <div class="inventory-title">INVESTIGATOR MISC</div>
+
+            <div class="misc-pair">
+                <span class="misc-header"> Cash on Hand: </span>
+                <span class="misc-value" contenteditable="true"> V</span>
+            </div>
+
+            <div class="misc-pair">
+                <span class="misc-header"> Phobias: </span>
+                <span class="misc-value" contenteditable="true"> X</span>
+            </div>
+
+            <div class="misc-pair">
+                <span class="misc-header"> Inventory: </span>
+                <span class="misc-value" contenteditable="true"> Y</span>
+            </div>
+
+            <div class="misc-pair">
+                <span class="misc-header"> Notes: </span>
+                <span class="misc-value" contenteditable="true">Z</span>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div id="resistance-modal" class="modal">
+
+    <!-- Modal content -->
+    <div class="resistance-modal-content">
+        <span class="close" onclick="hideStatisticsResistanceModal()">&times;</span>
+
+        <div> Resistance Roll:</div>
+
+        <div>
+            <span class="current_skill" > x </span>
+            <span class="current_value" > y </span>
+            <span> versus </span>
+            <span class="opposing_value"  style="font-weight:bold;" contenteditable="true"> 100% </span>
+
+            <i class="fas fa-dice statistics-field-tooltip-dice-roll" onclick="rollStatisticsResistanceModal(this)"></i>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</body>
+</html>
