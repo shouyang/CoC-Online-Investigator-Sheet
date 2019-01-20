@@ -143,23 +143,17 @@ function roll_investigator_statistic(element_id)
 
 function roll_resistance_check(skill_value, opp_value)
 {
-    var result;
+    var result = Object();
 
     var threshold = 50 + 5 * skill_value - 5 * opp_value;
     var roll= roll_d100();
 
+    result.check     = (roll <= threshold ? "✓" : "✗");
     result.threshold = threshold;
     result.result    = roll;
 
     return result;
 }
-
-
-
-
-
-
-
 
 function try_parse_float(text)
 {
@@ -175,7 +169,8 @@ function try_parse_float(text)
 
 
 // When the user clicks on the button, open the modal
-function displayStatisticsResistanceModal(element) {
+function displayStatisticsResistanceModal(element)
+{
     // Get the modal
     var modal = document.getElementById('resistance-modal');
 
@@ -185,10 +180,42 @@ function displayStatisticsResistanceModal(element) {
     modal.style.display = "block";
 }
 
+function displaySkillResistanceModal(element)
+{
+    // Get the modal
+    var modal = document.getElementById('resistance-modal');
+
+    modal.getElementsByClassName("current_skill") [0].innerHTML = element.closest(".skills-pair").getElementsByClassName("skills-header")[0].innerHTML;
+    modal.getElementsByClassName("current_value") [0].innerHTML = element.closest(".skills-pair").getElementsByClassName("skills-value")[0].innerHTML;
+
+    modal.style.display = "block"
+}
+
 function rollStatisticsResistanceModal()
 {
     var modal = document.getElementById('resistance-modal');
 
+    var current_statistic  =  try_parse_float(modal.getElementsByClassName("current_value")[0].innerHTML);
+    var opposing_statistic =  try_parse_float(modal.getElementsByClassName("opposing_value")[0].innerHTML);
+
+    var result = roll_resistance_check(current_statistic / 5, opposing_statistic / 5);
+
+    var output_area = modal.getElementsByClassName("resistance-modal-result")[0];
+    output_area.innerText  = `${result.check}:threshold= ${result.threshold},roll = ${result.result}`;
+    output_area.style.fontWeight = "Bold";
+
+
+    if (result.check == "✓")
+    {
+        output_area.style.color = "green";
+    }
+
+    else
+    {
+        output_area.style.color = "red";
+    }
+
+        setTimeout( function() {output_area.innerText = ""}, 60 * 1000);
 }
 
 
